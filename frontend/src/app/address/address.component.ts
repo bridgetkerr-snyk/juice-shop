@@ -74,6 +74,7 @@ export class AddressComponent implements OnInit {
     this.ngZone.run(() => this.router.navigate(['/delivery-method']))
   }
 
+  // this deletes the address 
   deleteAddress (id: number) {
     this.addressService.del(id).subscribe(() => {
       this.error = null
