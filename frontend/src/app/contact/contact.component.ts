@@ -53,6 +53,7 @@ export class ContactComponent implements OnInit {
     this.formSubmitService.attachEnterKeyHandler('feedback-form', 'submitButton', () => this.save())
   }
 
+  // generate a new captcha
   getNewCaptcha () {
     this.captchaService.getCaptcha().subscribe((data: any) => {
       this.captcha = data.captcha
